@@ -1,0 +1,65 @@
+colors:
+  primary:
+    background: '#040c16'
+    foreground: '#cce9ea'
+  cursor:
+    text:   '#c2cae2'
+    cursor: '#d9d7d6'
+  bright:
+    black:   '#17252A' 
+    red:     '#E6676B' 
+    green:   '#A2E4B8' 
+    yellow:  '#e2d06a' 
+    blue:    '#92bbed' 
+    magenta: '#ecc6e8' 
+    cyan:    '#80ffff' 
+    white:   '#cfebec'
+  normal:
+    black:   '#1b2c31' 
+    red:     '#FF7377' 
+    green:   '#AAF0C1' 
+    yellow:  '#eadd94'
+    blue:    '#bdd6f4' 
+    magenta: '#f9ecf7' 
+    cyan:    '#b3ffff' 
+    white:   '#edf7f8' 
+
+env:
+  TERM: xterm-256color
+
+window:
+  dynamic_padding: true 
+  padding:
+    x: 12
+    y: 12
+
+font:
+  normal:
+    family: JetBrainsMono NF
+    style: Regular
+
+  bold:
+    family: JetBrainsMono NF
+    style: Bold
+
+  italic:
+    family: JetBrainsMono NF
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono NF
+    style: Bold Italic
+
+  size: 10
+
+  offset:
+    x: 0
+    y: 0
+
+cursor:
+  style: Underline
+
+
+  vi_mode_style: 'Underline'
+
+live_config_reload: true
