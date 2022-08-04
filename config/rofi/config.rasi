@@ -1,92 +1,85 @@
 configuration {
-	modi:				"drun";
-	font:				"Rubik 10";
-	show-icons:                     true;
-	icon-theme: 			"Reversal-dark";
-	display-drun: 			"";
-	drun-display-format:            "{name}";
-	sidebar-mode: 			false;
+	modi:					"drun";
+	display-drun: 			"Apps";
+	drun-display-format:    "{name}";
+	font:				    "JetBrainsMono Nerd Font 9";
+	show-icons:              true;
+	icon-theme: 			"Papirus";
 }
 
 @theme "/dev/null"
 
 * {
-	bg:				#0B0D10;
-	fg:				#e8e8d3;
-	accent:				#687363;
-	button:				#17252A;
+	bg:				#080c0d;
+	fg:				#dadada;
+	accent:			#22292b;
+    active:      	#3b4244;
+	rad:			12px;
 
-	background-color:		@bg;
-	text-color:			@fg;
+	background-color: @bg;
+	text-color:	@fg;
 }
 
 window {
-	border-radius:                  7px;
-	width:			    	40%;
-	padding: 			32px;
-}
-
-prompt {
-	background-color:		@button;
-	enabled:			true;
-	padding:			0.5% 32px 0% -0.5%;
-	font:				"Rubik 10";
-}
-
-entry {
-    	placeholder:			"Search";
-	background-color:               @button;
-    	placeholder-color:              @fg;
-    	expand:                         true;
-    	padding:                        0.15% 0% 0% 0%;
+	transparency: "real";
+	height: 100%;
+    width: 22%;
+	location: east;
+	x-offset: 0%;
+	y-offset: 0%;
 }
 
 inputbar {
-	children:			[ prompt, entry ];
-    	background-color:               @button;
-    	expand:                         false;
-    	border-radius:                  6px;
-    	margin:                         0%;
-    	padding:                        10px;
+	children: [ textbox, entry ];
+	expand: false;
+	margin: 20px;
+	border-radius: @rad;
+	background-color: @active;
+}
+
+textbox {
+    str: "";
+    expand: false;
+    padding: 0 1% 0;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    border-radius: @rad;
+    background-color: @accent;
+    text-color: @fg;
+    font: "Material Icons 17";
+}
+
+entry{
+	expand: true;
+	padding: 2%;
+    placeholder: "Search";
+	border-radius: @rad;
+    background-color: @active;
 }
 
 listview {
-    	columns:                        4;
-    	lines:	                        3;
-    	cycle:                          false;
-    	dynamic:                        true;
-    	layout:                         vertical;
-}
-
-mainbox {
-    	children:                       [ inputbar, listview ];
-    	spacing:                       	2%;
-    	padding:                        2% 1% 2% 1%;
+	columns: 2;
+	lines: 2;
+	cycle: false;
+    margin: 20px;
 }
 
 element {
-    	orientation:                    vertical;
-    	padding:                        2% 0% 2% 0%;
-}
-
-element-icon {
-    	size:                           48px;
-    	horizontal-align:	 	0.5;
-}
-
-element-text {
-    	expand:                         true;
-    	horizontal-align:               0.5;
-    	vertical-align:                 0.5;
-    	margin:                         0.5% 0.5% -0.5% 0.5%;
+	orientation: vertical;
+	padding: 0.5em;
 }
 
 element-text, element-icon {
-	background-color:		inherit;
-	text-color:			inherit;
+	padding: 0.2em;
+	horizontal-align: 0.5;
+	background-color: inherit;
 }
 
+element-icon { size: 48px; }
+listview, element, element selected, element-text, element-icon { cursor: pointer; }
+
 element selected {
-    	background-color:               @button;
-    	border-radius:                  6px;
+	background-color: @active;
+	text-color: @fg;
+	border-radius: @rad;
 }
