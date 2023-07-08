@@ -5,7 +5,7 @@
 <p>Hey, I'm glad to see you around here, here's my humble dotfiles. </p>
 
 - 🔥**OS:** [ArchLinux](https://archlinux.org/)
-- **Wm:** [bspwm](https://github.com/baskerville/bspwm)
+- Wm:** [bspwm](https://github.com/baskerville/bspwm)
 - 🐈**Terminal:** [kitty](https://github.com/kovidgoyal/kitty)
 - ☕**Shell:** [zsh](https://www.zsh.org/)
 - 📝**Editor:** [neovim](https://github.com/neovim/neovim)
